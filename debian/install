@@ -1,0 +1,7 @@
+debian/core_temp_rpt.service lib/systemd/system
+debian/core_temp_rpt.timer lib/systemd/system
+debian/stmmac_led.service lib/systemd/system
+debian/serial_buad_set.service lib/systemd/system
+debian/core_temp_rpt.sh usr/bin
+debian/rtl8211f_led.sh usr/bin
+debian/pm2ec usr/lib/systemd/system-sleep

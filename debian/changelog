@@ -1,0 +1,7 @@
+cpu-ec-reporter (0.1.0-6ubuntu1) UNRELEASED; urgency=medium
+
+  [ chenfei ]
+  * first commit
+  * Utilize systemd services to implement functions - Send core temperature and sleep information to EC - Control the LED lights of the RTL8211F network card
+
+ -- Fei Chen <chenfei@ultrarisc.com>  Wed, 07 Jan 2026 11:25:49 +0800
