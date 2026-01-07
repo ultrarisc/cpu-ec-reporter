@@ -1,0 +1,14 @@
+Source: cpu-ec-reporter
+Section: devel
+Priority: optional
+Maintainer: chenfei <chenfei@ultrarisc.com>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 0.1.0-6
+Homepage: https://github.com/ultrarisc/cpu-ec-reporter/
+
+Package: cpu-ec-reporter
+Depends: lm-sensors
+Architecture: any
+Description: Custom application tool provided by the manufacturer
+ Can send core temperature and sleep information to ec.
+ Control the LED lights of the RTL8211F network card.
