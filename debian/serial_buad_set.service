@@ -1,0 +1,12 @@
+[Unit]
+Description=Set the baud rate of ttyS1
+After=multi-user.target
+Before=core_temp_rpt.timer
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/stty -F /dev/ttyS1 115200
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

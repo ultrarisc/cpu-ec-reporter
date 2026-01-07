@@ -1,0 +1,14 @@
+[Unit]
+Description=Trigger temperature control through a timed cycle
+After=serial_buad_set.service
+Requires=serial_buad_set.service core_temp_rpt.service
+
+[Timer]
+OnUnitActiveSec=3s
+AccuracySec=3s
+RandomizedDelaySec=0
+Persistent=yes
+Unit=core_temp_rpt.service
+
+[Install]
+WantedBy=timers.target

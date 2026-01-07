@@ -1,0 +1,33 @@
+cpu-ec-reporter for Debian
+==================
+
+cpu-ec-reporter is a lightweight utility set that:
+- Periodically reads CPU temperature and reports it to the EC via serial
+- Reports suspend/resume status changes to the EC through a systemd-sleep hook
+- Initializes RTL8211F NIC LED trigger behavior
+
+Installed units and scripts
+---------------------------
+
+- core_temp_rpt.service: one-shot service that sends temperature data to the EC.
+- core_temp_rpt.timer: triggers core_temp_rpt.service periodically.
+- serial_buad_set.service: sets ttyS1 baud rate before the timer starts.
+- stmmac_led.service: applies RTL8211F LED trigger settings.
+- /usr/lib/systemd/system-sleep/pm2ec: reports pre/post suspend state to the EC.
+
+Author
+------
+
+chenfei <chenfei@ultrarisc.com>
+
+License
+-------
+
+Unless otherwise stated, this project is licensed under GPL-3.0+.
+See debian/copyright for licensing details.
+
+
+Contributing
+------------
+
+Contributions are welcome through patches or pull requests.

@@ -1,0 +1,11 @@
+[Unit]
+Description=Set led lights of the rtl8211f
+After=multi-user.target network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/rtl8211f_led.sh || exit 0
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
