@@ -7,7 +7,7 @@ Standards-Version: 0.1.0-6
 Homepage: https://github.com/ultrarisc/cpu-ec-reporter/
 
 Package: cpu-ec-reporter
-Depends: lm-sensors
+Depends: lm-sensors, jq, xxd
 Architecture: any
 Description: Custom application tool provided by the manufacturer
  Can send core temperature and sleep information to ec.
