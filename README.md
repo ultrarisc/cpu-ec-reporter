@@ -28,3 +28,8 @@ dpkg-buildpackage -b -us -uc
 ```
 
 For more Debian-specific details, see `debian/README.Debian`.
+
+## License
+
+This project is licensed under Apache-2.0.
+See `LICENSE` and `debian/copyright` for details.

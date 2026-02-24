@@ -23,8 +23,8 @@ chenfei <chenfei@ultrarisc.com>
 License
 -------
 
-Unless otherwise stated, this project is licensed under GPL-3.0+.
-See debian/copyright for licensing details.
+Unless otherwise stated, this project is licensed under Apache-2.0.
+See LICENSE and debian/copyright for licensing details.
 
 
 Contributing
