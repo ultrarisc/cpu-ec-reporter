@@ -1,3 +1,16 @@
+cpu-ec-reporter (0.1.1) noble; urgency=medium
+
+  * Restructure repository layout:
+    - move runtime scripts to scripts/
+    - move systemd unit files to systemd/
+    - move suspend hook to sleep-hooks/
+    - keep debian/ for packaging metadata only
+  * Update debian/install to match new source paths.
+  * Normalize debian/control fields and package description.
+  * Switch licensing to Apache-2.0 and update related documentation.
+
+ -- Tim Deng <dengtianmai@ultrarisc.com>  Tue, 24 Feb 2026 18:53:00 +0800
+
 cpu-ec-reporter (0.1.0) noble; urgency=medium
 
   [ chenfei ]

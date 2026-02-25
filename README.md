@@ -1,34 +1,35 @@
-# cpu-ec-reporter – What Is It?
+# cpu-ec-reporter
 
+cpu-ec-reporter is a lightweight Linux utility set used to:
 
-**cpu-ec-reporter** is a custom application tool provided by the manufacturer:
+- Periodically read CPU temperature and report it to the EC over serial
+- Report suspend/resume state changes to the EC
+- Initialize RTL8211F NIC LED trigger behavior
 
-- Use systemd service to periodically obtain CPU temperature information and
-send it to EC
-- Use systemd services to send system suspend and wake-up statuses
-- Set the LED lights of the RTL8211F network card.
+The project is distributed as a Debian package, with runtime logic implemented by shell scripts and systemd units.
 
-See https://github.com/ultrarisc/cpu-ec-reporter/blob/main/debian/README.Debian for a more detailed description of this project.
+## Directory Layout
 
----
+- `scripts/`: runtime scripts (installed to `/usr/bin`)
+- `systemd/`: systemd service/timer units (installed to `/lib/systemd/system`)
+- `sleep-hooks/`: systemd-sleep hook script (installed to `/usr/lib/systemd/system-sleep`)
+- `debian/`: Debian packaging metadata and rules
 
-## Getting Help (Other Sources)
+## Build Debian Package
 
-* **🐛 GitHub Issues:** [Open an issue](https://github.com/ultrarisc/cpu-ec-reporter/issues)
+Minimum build dependency:
 
----
+- `debhelper-compat (= 13)`
 
-
-## Installation
-
-
-### Build Environment Requirements
-* `debhelper-compat`
-
-### Build Instructions
+Build command:
 
 ```bash
 dpkg-buildpackage -b -us -uc
 ```
 
----
+For more Debian-specific details, see `debian/README.Debian`.
+
+## License
+
+This project is licensed under Apache-2.0.
+See `LICENSE` and `debian/copyright` for details.
