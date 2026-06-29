@@ -1,4 +1,5 @@
 #!/bin/bash
+modprobe ledtrig_netdev
 lsmod | grep ledtrig_netdev
 Module_flag=$?
 if [ "$Module_flag" -eq 0 ];then
