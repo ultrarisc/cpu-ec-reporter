@@ -4,4 +4,5 @@ systemd/stmmac_led.service lib/systemd/system
 systemd/serial_buad_set.service lib/systemd/system
 scripts/core_temp_rpt.sh usr/bin
 scripts/rtl8211f_led.sh usr/bin
+scripts/remove_ttys1_console.sh usr/lib/cpu-ec-reporter
 sleep-hooks/pm2ec usr/lib/systemd/system-sleep
